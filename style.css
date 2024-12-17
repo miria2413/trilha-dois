@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Borel", cursive;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    z-index: 999;
+    background-color: black;
+}
+
+header img {
+    flex: 1;
+    height: 60px;
+    width: 180px;
+    border-radius: 50%;
+}
+
+header nav {
+    flex: 2;
+    justify-items: right;
+
+}
+
+header ul {
+    padding: 20px;
+    gap: 20px;
+    display: flex;
+    list-style: none;
+}
+
+header a {
+    cursor: pointer;
+    color: #bea15d;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.dropd {
+    padding: 0px 30px;
+}
+
+.drop {
+    cursor: pointer;
+    color: #bea15d;
+    text-decoration: none;
+    font-size: 10px;
+    padding: 0px;
+
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+li:hover {
+    transform: scale(1.3);
+}
+
+ul li ul.dropdown li {
+    display: block;
+
+}
+
+ul li ul.dropdown {
+    width: 100%;
+    background: #000;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li a:hover {
+    background: #f9f295;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+section {
+    height: 600px;
+    width: 100%;
+}
+
+#home {
+    background-image: url(img/fundo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    font-size: 25px;
+    color: #bea15d;
+}
+
+#home h1 {
+    position: absolute;
+    top: 400px;
+    left: 600px;
+    border-radius: 10px;
+    padding: 0 10px;
+    background-color: rgba(250, 235, 215, 0.377);
+}
+
+#estante {
+    background-image: linear-gradient(to left, #f9f295, #e0aa3e, #f9f295, #b88a44);
+    justify-items: center;
+}
+
+#estante p {
+    margin: 40px auto;
+    padding: 120px 120px 0 150px;
+}
+
+#estante cite {
+    font-family: "Borel", cursive;
+    margin-left: 90px;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+#button {
+    background-color: #000801;
+    /* Cor de fundo */
+    text-transform: uppercase;
+    border: none;
+    transition: all 0.5s ease-in-out;
+    /* Adiciona transição para animação suave */
+    transition: all 0.3s;
+    position: relative;
+}
+
+#button a {
+    transition: all 0.3s;
+    color: #b88a44;
+    text-decoration: none;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+#button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-top-color: rgba(255, 255, 255, 0.5);
+    border-bottom-color: rgba(238, 216, 216, 0.5);
+    transform: scale(0.1, 1);
+}
+
+#button:hover a {
+    letter-spacing: 2px;
+}
+
+#button:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+#button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#button:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
+}
+
+
+#img {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+#img figure {
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-template-rows: auto;
+    margin: 40px;
+    width: 300px;
+    align-items: center;
+    justify-items: center;
+    border-radius: 15px;
+    height: 300px;
+    background-image: linear-gradient(to right, #f9f295, #e0aa3e, #f9f295, #b88a44);
+    opacity: 0.8;
+}
+
+figure:hover,
+#enviar:hover {
+    transform: scale(1.3);
+}
+
+#img h2 {
+    font-family: "Borel", cursive;
+    margin-left: 90px;
+    font-size: 30px;
+    writing-mode: vertical-lr;
+    margin: 0 40px 0 60px;
+    transform: rotate(180deg);
+}
+
+#img img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.info {
+    cursor: pointer;
+    text-decoration: none;
+    font-family: "Borel", cursive;
+    color: #704504;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+#video {
+    background-color: #000;
+}
+
+#video-mp {
+    text-align: center;
+    padding: 50px;
+}
+
+#mapa {
+    text-align: center;
+    padding: 80px 50px 0;
+    display: flex;
+}
+
+#mapa iframe {
+    border-radius: 15px;
+}
+
+#mapa form {
+    max-height: 320px;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 20px;
+}
+
+form h3,
+footer {
+    font-family: "Borel", cursive;
+    font-size: 16px;
+}
+
+.label {
+    height: 25px;
+    text-align: left;
+}
+
+form label {
+    font-family: "Borel", cursive;
+    font-size: 14px;
+}
+
+form input,
+textarea {
+    font-family: "Borel", cursive;
+    width: 80%;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 0 10px;
+}
+
+#enviar {
+    width: 90px;
+    height: 20px;
+    margin: 10px 200px;
+    background-color: #000801;
+    color: #bea15d;
+    border-radius: 15px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+
+footer {
+    background-color: #e0aa3e;
+    height: 100px;
+    text-align: center;
+    padding-top: 48px;
+}
+
+/*carrossel*/
+
+.carrossel h1 {
+    text-align: center;
+    margin: 3em 0;
+    font-family: "Borel", cursive;
+}
+
+.carrossel .container {
+    position: relative;
+    padding: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carrossel .gallery-wrapper {
+    overflow-x: auto;
+}
+
+.carrossel .arrow-left,
+.carrossel .arrow-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    font-size: 20px;
+    line-height: 250px;
+    width: 40px;
+    color: #fff;
+    transition: all 600ms ease-in-out;
+    background: linear-gradient(to left, transparent 0%, black 200%);
+    opacity: 0.1;
+    cursor: pointer;
+    border: none;
+}
+
+.carrossel .arrow-left:hover,
+.carrossel .arrow-right:hover {
+    opacity: 1;
+}
+
+.carrossel .arrow-right {
+    right: 0;
+    left: auto;
+    text-align: right;
+    background: linear-gradient(to right, transparent 0%, black 200%);
+}
+
+.carrossel .gallery {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+}
+
+.carrossel .item {
+    width: 400px;
+    height: 350px;
+    flex-shrink: 0;
+    transition: all 600ms ease-in-out;
+    opacity: 0.5;
+}
+
+.carrossel .current-item {
+    opacity: 1;
+}
+
+.carrossel .gallery-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.carrossel .gallery-wrapper {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+
+/*responsivo */
+
+
+@media (max-width: 768px) {
+
+    header img {
+        height: 30px;
+        width: 120px;
+    }
+
+    header nav {
+        flex: 0;
+    } 
+    
+    header ul {
+        padding: 0px;
+        gap: 0px;
+    }
+
+    header a {
+        font-size: 15px;
+        padding: 0 8px;
+
+    }
+
+    .dropd {
+        padding: 0px 20px;
+    }
+
+    .drop {
+        font-size: 8px;
+    }
+
+
+    #home {
+        font-size: 17px;
+    }
+
+    #home h1 {
+        top: 400px;
+        left: 350px;
+    }
+
+    #estante p {
+        margin: 10px auto;
+        padding: 80px 80px 12px 130px;
+    }
+
+    #estante cite {
+        margin-left: 80px;
+        font-size: 20px;
+    }
+
+
+    #img figure {
+        margin: 10px;
+        width: 200px;
+        height: 300px;
+    }
+
+    figure:hover,
+    #enviar:hover {
+        transform: scale(1.1);
+    }
+
+    #img h2 {
+        margin-left: 15px;
+        font-size: 20px;
+        margin: 0 15px;
+    }
+
+    #img img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+    }
+
+    .info {
+        font-size: 10px;
+    }
+
+    #mapa form {
+        margin: 0 10px;
+        max-width: 400px;
+    }
+
+
+    form h3 {
+        font-size: 12px;
+
+        text-align: left;
+    }
+
+    .label {
+        height: 15px;
+    }
+
+    form label {
+        font-size: 12px;
+    }
+
+    form input,
+    textarea {
+        width: 60%;
+        height: 15px;
+    }
+
+    /*carrossel*/
+
+    .carrossel h1 {
+        margin: 1em 0;
+    }
+
+    .carrossel .container {
+        padding: 10px;
+        max-width: 600px;
+    }
+
+    .carrossel .item {
+        width: 200px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 1080px) {
+    
+    header img {
+        height: 40px;
+        width: 160px;
+    }
+
+    header nav {
+        flex: 1;
+    } 
+    
+    header ul {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    header a {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+    .drop {
+        font-size: 10px;
+    }
+
+    #home {
+        font-size: 20px;
+    }
+
+    #home h1 {
+        top: 400px;
+        left: 500px;
+    }
+
+    #estante p {
+        margin: 10px;
+        padding: 140px 70px 20px 60px;
+    }
+
+    #estante cite {
+        margin-left: 80px;
+        font-size: 23px;
+    }
+
+    #img figure {
+        margin: 25px;
+        width: 300px;
+        height: 400px;
+    }
+
+    figure:hover,
+    #enviar:hover {
+        transform: scale(1.2);
+    }
+
+    #img h2 {
+        margin-left: 15px;
+        font-size: 30px;
+        margin: 0 15px;
+    }
+
+    #img img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+    }
+
+    .info {
+        font-size: 15px;
+    }
+
+    #mapa form {
+        margin: 0 10px;
+        max-width: 400px;
+    }
+
+
+    form h3 {
+        font-size: 14px;
+        text-align: left;
+    }
+
+
+    form input,
+    textarea {
+        width: 70%;
+        height: 20px;
+    }
+
+    /*carrossel*/
+
+    .carrossel h1 {
+        margin: 2em 0;
+    }
+
+    .carrossel .container {
+        padding: 20px;
+        max-width: 800px;
+    }
+
+    .carrossel .item {
+        width: 250px;
+        height: 300px;
+    }
+}
